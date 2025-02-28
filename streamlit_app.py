@@ -1,7 +1,9 @@
 import streamlit as st
-from pages.page_1 import page1
-from pages.page_2 import page2
 from datetime import datetime
+
+from pages.page1 import page1
+from pages.page2 import page2
+
 
 st.set_page_config(
 
