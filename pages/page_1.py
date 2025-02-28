@@ -1,3 +1,4 @@
 import streamlit as st
-def function_page1():
+
+def func_page_1():
     st.title('Page 1')
