@@ -1,10 +1,6 @@
 import streamlit as st
 from datetime import datetime
 
-from pages.page1 import page1
-from pages.page2 import page2
-
-
 st.set_page_config(
 
     page_title='Hello world',
@@ -29,24 +25,3 @@ while True:
         st.warning("Time's up!")
         break
 
-def main():
-    st.sidebar.subheader('Page selection')
-    page_selection = st.sidebar.selectbox('Please select a page',['Main Page',
-    'Page 1','Page 2'])
-    pages_main = {
-        'Main Page': main_page,
-        'Page 1': run_page1,
-        'Page 2': run_page2
-    }
-
-    # Run selected page
-    pages_main[page_selection]()
-
-def main_page():
-    st.title('Main Page')
-def run_page1():
-    page1()
-def run_page2():
-    page2()
-if __name__ == '__main__':
-    main()
