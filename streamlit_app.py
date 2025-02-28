@@ -1,6 +1,6 @@
 import streamlit as st
-from pages.page_1 import func_page_1
-from pages.page_2 import func_page_2
+from pages.page_1 import page1
+from pages.page_2 import page2
 from datetime import datetime
 
 st.set_page_config(
@@ -33,8 +33,8 @@ def main():
     'Page 1','Page 2'])
     pages_main = {
         'Main Page': main_page,
-        'Page 1': run_page_1,
-        'Page 2': run_page_2
+        'Page 1': run_page1,
+        'Page 2': run_page2
     }
 
     # Run selected page
@@ -42,9 +42,9 @@ def main():
 
 def main_page():
     st.title('Main Page')
-def run_page_1():
-    func_page_1()
-def run_page_2():
-    func_page_2()
+def run_page1():
+    page1()
+def run_page2():
+    page2()
 if __name__ == '__main__':
     main()
