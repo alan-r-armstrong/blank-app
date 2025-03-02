@@ -1,4 +1,4 @@
-from Models import Post
+from Model import Post
 import datetime
 class API:
     def __init__(self, config=None):
