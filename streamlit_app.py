@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import datetime
+conn = st.connection('snowflake')
 
 st.set_page_config(
 
