@@ -8,6 +8,10 @@ st.title('🎈 Hello world')
 
 st.title("Clock")
 clock = st.empty()
+
+for row in df.itertuples():
+    st.write(f"{row.NAME} has a :{row.PET}:")
+
 while True:
     time = datetime.now().strftime("%H:%M:%S")
     clock.info('**Current time: ** %s' % (time))
@@ -15,7 +19,3 @@ while True:
         clock.empty()
         st.warning("Time's up!")
         break
-
-for row in df.itertuples():
-    st.write(f"{row.NAME} has a :{row.PET}")
-
