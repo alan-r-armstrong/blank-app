@@ -1,6 +1,7 @@
 import streamlit as st
 from datetime import datetime
-conn = st.connection('snowflake')
+conn = st.connection("snowflake")
+df = conn.query("SELECT * FROM MYTABLE;", ttl="10m")
 
 st.sidebar.title("🎈 Hello World")
 st.title('🎈 Hello world')
@@ -15,4 +16,6 @@ while True:
         st.warning("Time's up!")
         break
 
-conn()
+for row in df.itertuples():
+    st.write(f"{row.NAME} has a :{row.PET}")
+
